@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node_app
+  labels:
+    app: node_app
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.deployment.selector.matchLabels.app }}
+  replicas: {{ .Values.replicaCount }}  
+
+template:
+    metadata:
+      labels:
+        app: {{ .Values.deployment.selector.matchLabels.app }}
+    spec:
+      containers:
+      - name: node_app
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - name: node_app-port
+          containerPort: {{ .Values.service.port }} 
+          protocol: TCP

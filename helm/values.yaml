@@ -1,0 +1,19 @@
+# values.yaml
+
+replicaCount: 1
+image:
+  repository: adiverma/quantam_dynamics_task
+  tag: v1
+
+service:
+  name: node_app-service
+  type: NodeIP
+  port: 8080
+  targetPort: 8080
+  selector:
+    app: node_app
+
+deployment:
+  selector:
+    matchLabels:
+      app: node_app

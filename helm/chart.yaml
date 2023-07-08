@@ -1,0 +1,11 @@
+apiVersion: v2
+name: node_app
+version: 0.1.0
+description: Node.js application
+appVersion: 1.0
+
+dependencies: []
+
+files:
+  - templates/deployment.yaml
+  - templates/service.yaml
