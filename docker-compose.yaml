@@ -3,7 +3,7 @@ version: '3.8'
 services:
   my-nginx:
     image: nginx:stable-alpine3.19-perl
-    container_name: my-nginx-container
+    container_name: nginx-container
     networks:
       - my-network
 
