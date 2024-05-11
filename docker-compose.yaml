@@ -1,0 +1,11 @@
+version: '3.8'
+#dhvkjfsssfsfs
+services:
+  my-nginx:
+    image: nginx:stable-alpine3.19-perl
+    container_name: my-nginx-container
+    networks:
+      - my-network
+
+networks:
+  my-network:
