@@ -1,5 +1,6 @@
 version: '3.8'
 #dhvkjsfdsfsfdssdfsgregr
+services:
   my-nginx:
     image: nginx:stable-alpine3.19-perl
     container_name: nginx-container
